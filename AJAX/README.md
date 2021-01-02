@@ -9,4 +9,4 @@ All'interno di questa cartella è possibile trovare tutti gli esercizi svolti in
  3. es 03 Ombrelloni
  
  ### Progetti:
- 1. Progetto RandomUser (jQuery - Ajax): Realizzazto su modello del sito [randomuser.me](randomuser.me) --> link al Repository dedicato al progetto
+ 1. Progetto RandomUser (jQuery - Ajax): Realizzazto su modello del sito [randomuser.me](randomuser.me) --> [link al Repository dedicato al progetto](https://github.com/vallauri-ict/randomuser-Giada-Valinotto.git)
