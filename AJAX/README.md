@@ -1,6 +1,7 @@
 # AJAX - Esercizi svolti, progetti e dispense teoriche
 
 All'interno di questa cartella è possibile trovare tutti gli esercizi svolti in didattica, i progetti svolti individualmente ed utili dispense a cui è stato fatto riferimento per la loro realizzazione.
+All'interno della cartella sono inoltre presenti le librerie jQuery (in versione estesa e compatta), per permetterne l'utilizzo
 
 ### Esercizi:
 #### Ajax
