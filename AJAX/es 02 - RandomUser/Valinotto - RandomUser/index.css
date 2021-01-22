@@ -1,0 +1,334 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);
+*
+{
+    font-family: "Ubuntu";
+}
+
+#h1
+{
+font-family: Ubuntu,sans-serif;
+color: #fff;
+text-align: center;
+-webkit-tap-highlight-color: transparent;
+margin: 0;
+padding-top: 100px;
+font-size: 48px;
+font-weight: 100;
+text-transform: uppercase;
+}
+
+#p
+{
+    font-family: Ubuntu,sans-serif;
+    color: #fff;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;  
+    padding: 15px;
+}
+
+.social
+{
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, .5);
+    text-decoration: none;
+}
+
+#body
+{
+    margin:0;
+    background-color:#f9f9f9;
+    overflow-x:hidden;
+    padding-bottom:30px;
+}
+.bodyDivs
+{
+    width:528px;
+    margin:0px auto;
+    color:white;
+}
+#wrapperGeneratore
+{
+    border:1px solid black;
+    height:500px;
+    position:relative;
+    z-index: 0; 
+}
+
+#wrapper1
+{
+    border:1px solid white;
+    border-radius:5px;
+    border-bottom-color:#c7c7c7;
+    width:740px;
+    margin:0 auto;
+    margin-top:-50px;
+    position:relative;
+    z-index: 1;
+    background-color: white;
+    visibility:hidden;
+    padding:0 20px;
+}
+
+#wrapper2
+{
+    background-color:white;
+    border:1px solid #bfbfbf;
+    border-radius:100px;
+    width:105px;
+    height:105px;
+    margin:0 auto;
+    padding:5px;
+    position:relative;
+    z-index: -1;
+}
+
+#hr
+{
+    color:#bfbfbf;
+    position:relative;
+    top:85px;
+    z-index: -1;
+    display: inline-block;
+    width:780px;
+    margin-left:-21px;
+}
+#informazioneVisualizzata
+{
+    color:#999;
+    font-size: 13pt;
+}
+#informazione
+{
+    color:rgb(44, 46, 49);
+    font-size: 30pt;
+    margin-top:-13px;
+}
+#contenitorePulsanti
+{
+    overflow:auto;
+    margin:0 auto;
+    width: 660px;
+}
+#pulsanti
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    float:left;
+}
+
+#pulsanti li
+{
+    cursor:pointer;
+    display:block;
+    width:55px;
+    height:66px;
+    float:left;
+    margin:27.5px;
+    background-image:url(img_Sito/icons.png);
+    background-size:520px;
+    background-position-y:-66px;
+    -webkit-transition:all .25s ease-out;
+    transition:all .25s ease-out;
+}
+#pulsanti li:before
+{
+    content:attr(data-label);
+    opacity:0;
+}
+#btnNome.active
+{
+    background-position:0 -132px;
+}
+#btnEmail.active
+{
+    background-position:-93.5px -132px;
+}
+#btnCompleanno.active
+{
+    background-position:-187px -132px;
+}
+#btnIndirizzo.active
+{
+    background-position:-280.5px -132px;
+}
+#btnTelefono.active
+{
+    background-position:-374px -132px;
+}
+#btnPassword.active
+{
+    background-position:-467.5px -132px;
+}
+#btnNome
+{
+    background-position:0 -66px;
+}
+#btnEmail
+{
+    background-position:-93.5px -66px;
+}
+#btnCompleanno
+{
+    background-position:-187px -66px;
+}
+#btnIndirizzo
+{
+    background-position:-280.5px -66px;
+}
+#btnTelefono
+{
+    background-position:-374px -66px;
+}
+#btnPassword
+{
+    background-position:-467.5px -66px;
+}
+#image
+{
+    border:1px solid white;
+    width:100px;
+    height:100px;
+    border-radius:100px;
+    margin:0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top:1px;
+    z-index: 1;
+}
+#wrapperFrecce
+{
+    margin: 0 auto;
+    overflow:auto;
+    width:700px;
+    visibility:hidden;
+}
+#frecciaSinistra
+{
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    border-right: 25px solid #000;
+    float:left;
+    opacity:0.5;
+}
+.block
+{
+    margin-bottom:25px;
+}
+footer {
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    background: #2c2e31;
+    overflow: hidden;
+    color: #fff;
+}
+
+footer h1
+{
+    text-align: center;
+    margin:50px 0;
+    font-size:48px;
+    font-weight:100;
+    text-transform:uppercase;
+}
+
+#frecciaDestra
+{
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    border-left: 25px solid #000;
+    float:right;
+    opacity:0.5;
+}
+#frecciaSinistra:hover
+{
+    opacity:1;
+    cursor: pointer;
+}
+#frecciaDestra:hover
+{
+    opacity:1;
+    cursor: pointer;
+}
+#profiloVisualizzato
+{
+    overflow: auto;
+    margin:0 auto;
+    text-align:center;
+}
+#informazioneVisualizzata
+{
+    text-align:center;
+}
+#informazione
+{
+    text-align:center;
+}
+#wrapperGeneratore
+{
+    margin:0 auto;
+    width:100%;
+    background-color: rgb(44,46,49);
+}
+#sliderProfili
+{
+    -webkit-appearance: none;
+    width: 275px;
+    height: 8px;
+    border-radius: 5px;   
+    background: linear-gradient(to right, #7cdf0b 0%, #0088aa 100%) no-repeat center;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    position: relative;
+    top:-30px;
+    left:250px;
+}
+
+#sliderProfili::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #36b5f5;
+    cursor: pointer;
+}
+#profiloVisualizzato
+{
+    position:relative;
+    top:15px;
+    font-size:15pt;  
+}
+#btnGenera
+{
+    display: block;
+    margin:0 auto;
+    font-size: 20pt;
+    background-color: rgba(0, 0, 0, 0);
+    border:1px solid white;
+    border-radius:15px;
+    height: 40px;
+    width:200px;
+    color:white;
+}
+#btnGenera:hover
+{
+    cursor:pointer;
+}
+
+:selection {
+    color: #fff;
+    background-color: #83ba43;
+}

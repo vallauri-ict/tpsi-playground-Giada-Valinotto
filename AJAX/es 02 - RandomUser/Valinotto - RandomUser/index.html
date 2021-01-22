@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <script type="application/javascript" src="jquery-3.3.1.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+    <title id="title">Random User Generator</title>
+    <link rel="icon" href="img_Sito/favicons.png"/>
+</head>
+<body id="body">
+<div id="wrapperGeneratore">
+    <h1 id="h1">RANDOM USER GENERATOR</h1>
+    <p id="p">A free, <a href="https://github.com/RandomAPI/Randomuser.me-Node" style="color: rgb(109, 180, 39);"> open-source </a>  API for generating random user data. Like Lorem Ipsum, but for people.</p>
+    <center><a href="https://www.instagram.com/_bobynaaah_/?hl=it" target="_blank" class="social">
+        <img src="img_Sito/instagramLogo.png" style="width: 20px; margin-bottom: -6px; margin-right: 8px;">
+        Follow me @_bobynaaah_
+    </a></center>
+    <div class="bodyDivs"><p>Number of profiles to display: <label id="profileNumber">5</label></p><input type="range" min="1" max="25" value="5" id="sliderProfili"/></div>
+    <div  class="bodyDivs" id="divSelettori1">
+        <label>Gender:</label>
+        <input type="radio" name="rdoGender" value="" checked/>All
+        <input type="radio" name="rdoGender" value="female"/>Females
+        <input type="radio" name="rdoGender" value="male"/>Males
+    </div>
+    <div style="height:25px;"></div>
+    <div class="bodyDivs" id="divSelettori2">
+        <label>Nationality:</label>
+        <input type="checkbox" name="chkNation" checked value="US">US
+        <input type="checkbox" name="chkNation" checked value="GB">GB
+        <input type="checkbox" name="chkNation" checked value="DE">DE
+        <input type="checkbox" name="chkNation" checked value="BR">BR
+        <input type="checkbox" name="chkNation" checked value="IR">IR
+    </div>
+    <br>
+    <input type="button" value="Generate" id="btnGenera"/>
+</div>
+<br>
+<div id="wrapper1">
+    <div id="wrapper">
+        <hr id="hr"/>
+        <div id="wrapper2"><img id="image"></img></div>
+        <p id="informazioneVisualizzata"></p>
+        <p id="informazione"></p>
+        <div id="contenitorePulsanti" style="margin-top:-50px;">
+            <ul id="pulsanti">
+                <li onmouseover="movimentoBarra(this)" id="btnNome" class="active"></li>
+                <li onmouseover="movimentoBarra(this)" id="btnEmail"></li>
+                <li onmouseover="movimentoBarra(this)" id="btnCompleanno"></li>
+                <li onmouseover="movimentoBarra(this)" id="btnIndirizzo"></li>
+                <li onmouseover="movimentoBarra(this)" id="btnTelefono"></li>
+                <li onmouseover="movimentoBarra(this)" id="btnPassword"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapperFrecce" style="margin-bottom:10px;">
+        <div id="frecciaSinistra" onclick="controlloFrecce(this)"></div>
+        <div id="frecciaDestra" onclick="controlloFrecce(this)"></div>
+        <p id="profiloVisualizzato"></p>
+    </div>
+</div>
+<footer>
+    <div class="frame">
+        <h1>Random User Generator</h1>
+        <div class="block"><div class="builder">
+            <h3>Designed and Developed</h3>
+            <a href="https://github.com/Giada-Valinotto" target="_blank">
+                <img src="img_Sito/fotoFooterPagina.jpg" width="90px" alt="Designed and developed by Valinotto Giada" style="border-radius: 50%" title="Designed and developed by Valinotto Giada"></a>
+            <h3>Copyright Notice</h3>
+            <p>All randomly generated photos were hand picked from the authorized section of
+                <a class="social" href="http://uifaces.com" target="_blank">UI Faces</a>. Please visit
+                <a class="social" href="https://web.archive.org/web/20160811185628/http://uifaces.com/faq" target="_blank">UI Faces FAQ</a> for more information regarding how you can use these faces.<br><br></p></div>
+</div></div></footer>
+</body>
+</html>
