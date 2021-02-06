@@ -18,3 +18,7 @@ Il campo img contiene il link ad una immagine dell’automobile.
 4. Al termine di ogni riga sono posizionati :
  un pulsante dettagli che consente di visualizzare una nuova sezione contenente tutti i dettagli dell’automobile selezionata, compresi alimentazione e cilindrata. Il campo prezzo è realizzato mediante un textbox editabile con a fianco un pulsante salva.
  un pulsante elimina che consente di eliminare dal database l’automobile corrente. In corrispondenza dell’ok, visualizzare un messaggio di conferma e ricaricare la sola tabella dei dettagli
+
+
+<img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine2.png">
+<img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine.png">
