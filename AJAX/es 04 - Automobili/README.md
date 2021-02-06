@@ -22,3 +22,5 @@ Il campo img contiene il link ad una immagine dell’automobile.
 
 <img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine2.png">
 <img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine.png">
+
+_stud. Valinotto Giada_
