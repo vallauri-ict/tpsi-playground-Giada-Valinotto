@@ -37,6 +37,7 @@ let intestazione = [{
     "width":"12%",
 }]
 $(document).ready(function () {
+    let modello_sel;
     let _lstMarche = $("#lstMarche");
     let _lstModelli = $("#lstModelli");
 	let _table = $("table");
@@ -66,7 +67,7 @@ $(document).ready(function () {
                 op.text(modello.nome + " - " + modello.alimentazione);
                 op.appendTo(_lstModelli);
                 // salvo dentro ogni opzione tutte le info del modello selezionato
-                op.prop("modello", modello);
+                // op.prop("modello", modello);
             }
             _lstModelli.prop("selectedIndex",-1);
         });
@@ -74,11 +75,10 @@ $(document).ready(function () {
     /*nomeModello, alimentazione, colore, anno, img. Le immagini hanno una altezza fissa di 65px.*/
     _lstModelli.on("change", function(){
         _table.empty();
-        let opzione_selezionata = _lstModelli.children("option").eq(_lstModelli.prop("selectedIndex"));
-        // _lstModelli.prop("nome", opzione_selezionata.split(" - ")[0]);
-        // _lstModelli.prop("alimentazione", opzione_selezionata.split(" - ")[1]);
+        modello_sel = _lstModelli.val();// salvo dentro modello_sel l'id del modello selezionato
+        // let opzione_selezionata = _lstModelli.children("option").eq(_lstModelli.prop("selectedIndex"));
         // Vado a salvare dentro il list box le info relative al modello selezionato
-        _lstModelli.prop("modello", opzione_selezionata.prop("modello")) 
+        // _lstModelli.prop("modello", opzione_selezionata.prop("modello"));
         console.log(opzione_selezionata);
         let codModello = _lstModelli.val();
         let request = inviaRichiesta("get", URL + "/automobili?codModello=" + codModello);
@@ -169,14 +169,23 @@ function eliminaClick(){
 function dettagliClick(){
     _dettagli.show();
     $("#txtId").val(($(this).prop("automobile")).id);
-    $("#txtNome").val((_lstModelli.prop("modello")).nome);
-    $("#txtAlimentazione").val((_lstModelli.prop("modello")).alimentazione);
-    $("#txtCilindrata").val((_lstModelli.prop("modello")).cilindrata);
     $("#txtTarga").val(($(this).prop("automobile")).targa);
     $("#txtColore").val(($(this).prop("automobile")).colore);
     $("#txtAnno").val(($(this).prop("automobile")).anno);
     $("#txtKm").val(($(this).prop("automobile")).km);
     $("#txtPrezzo").val(($(this).prop("automobile")).prezzo);
+
+    // $("#txtNome").val((_lstModelli.prop("modello")).nome);
+    // $("#txtAlimentazione").val((_lstModelli.prop("modello")).alimentazione);
+    // $("#txtCilindrata").val((_lstModelli.prop("modello")).cilindrata);
+    let url = URL + "/modelli/" + modello_sel;
+    let request = inviaRichiesta("get", url);
+    request.fail(errore);
+    request.done(function(modello){
+        $("#txtNome").val(modello.nome);
+        $("#txtAlimentazione").val(modello.alimentazione);
+        $("#txtCilindrata").val(modello.cilindrata);
+    })
 
 
 
