@@ -29,5 +29,5 @@ function errore(jqXHR, text_status, string_error) {
 }
 
 function generaNumero(a, b){
-	return Math.floor((b-a+1)*Math.random()) + a;
+	return Math.floor((b - a + 1) * Math.random()) + a;
 }
