@@ -4,7 +4,7 @@ const URL = "http://localhost:3000"
 
 function inviaRichiesta(method, url, parameters={}) {
 	let contentType;
-	if(method.toUpperCase()=="GET")
+	if(method.toUpperCase() == "GET")
 		contentType="application/x-www-form-urlencoded;charset=utf-8";
 	else{
 		contentType = "application/json; charset=utf-8"
