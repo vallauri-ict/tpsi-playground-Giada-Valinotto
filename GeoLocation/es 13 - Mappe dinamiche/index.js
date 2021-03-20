@@ -1,11 +1,12 @@
 
 $(document).ready(function(){
     
-var wrapper = $("#wrapper")[0]
+var wrapper = $("#wrapper")[0] //Accede con [0] perchè il metodo map vuole un js
  // vallauri    // LatLng non accetta strignhe
 let position = new google.maps.LatLng(44.5557763, 7.7347183);	
 
 let mapOptions = {
+	//3 opt di base 
 	"center":position,
 	"zoom":16, 
 	"mapTypeId": google.maps.MapTypeId.ROADMAP,	
@@ -53,7 +54,5 @@ let mapOptions = {
 	
 // Visualizzazione della mappa  
 var mappa = new google.maps.Map(wrapper, mapOptions); 
-
-
 
 })
