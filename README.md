@@ -5,6 +5,7 @@ Sono inoltre presenti le dispense alla quali è stato fatto affidamento per lo s
 
 Macroargomenti svolti:
 1. Ajax
+2. Geolocation
 
 
 *Valinotto Giada, classe 4B INF, I.I.S. G. Vallauri, Fossano*
