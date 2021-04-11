@@ -5,9 +5,7 @@ All'interno della cartella sono inoltre presenti le librerie jQuery (in versione
 
 ### Esercizi:
 #### Ajax
- 1. es 01 RandomUser
- 2. es 02 Correzione verfica
- 3. es 03 Ombrelloni
+ 
  
  ### Progetti:
  1. Progetto RandomUser (jQuery - Ajax): Realizzazto su modello del sito [randomuser.me](randomuser.me) --> [link al Repository dedicato al progetto](https://github.com/vallauri-ict/randomuser-Giada-Valinotto.git)
