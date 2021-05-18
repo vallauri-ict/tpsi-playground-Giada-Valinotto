@@ -1,26 +1,20 @@
-# ES 04 - Automobili
+ES 04 - AUTOMOBILI
+   
 
-Si vuole realizzare una applicazione per l’esposizione/vendita di automobili usate. Il sistema è basato sul database allegato db.json costituito dalle seguenti tre tabelle
+Si vuole realizzare una applicazione web per la gestione di alcuni sondaggi onLine.
 
-- marche(id, nome); // fiat, audi, bmw
-- modelli(id, nome, codMarca, alimentazione, cilindrata); 
-- automobili(id, codModello, targa, colore, anno, prezzo, km, img);
+## In corrispondenza della richiesta della pagina iniziale index.php:
+- Il server si limita ad inviare al client una lista contenente l’elenco dei sondaggi disponibili, letti dal database
+- Il pulsante di submit invia una richiesta POST per la risorsa votazione.php contenente il codice del sondaggio selezionato.
 
-All’interno della tabella modelli il campo codMarca contiene l’ID della marca a cui il modello appartiene.
-La tabella automobili contiene l’elenco delle automobili fisicamente disponibili presso l’autorivendita.
-Il campo codModello contiene l’ID del modello a cui il modello appartiene.
-Il campo img contiene il link ad una immagine dell’automobile.
+## La pagina votazione.php:
+Consente all’utente di esprimere il proprio voto visualizzando:
+- Il titolo del sondaggio scelto
+- L’immagine relativa al sondaggio, (proprietà **src** del tag **img**)
+- Il testo della domanda
+- 3 option button di scelta della risposta.
+- In corrispondenza del submit, invia al server una richiesta GET relativamente alla risorsa risultati.php.
 
-### Si richiede la realizzazione di una applicazione single page che esegua le seguenti operazioni :
-1. All’avvio richiede al json-server l’elenco delle marche trattate dal venditore. Questo elenco deve essere caricato all’interno di una semplice lista, memorizzando l’ID all’interno del campo nascosto value
-2. In corrispondenza della scelta di una marca dalla lista, l’applicazione richiede al server l’elenco di tutti i modelli disponibili relativamente alla marca selezionata, modelli visualizzati all’interno di una seconda lista salvando come prima l’ID nel campo nascosto value e visualizzando nome del modello e tipo di alimentazione.
-3. In corrispondenza della scelta di un modello dalla lista, l’applicazione richiede al server l’elenco di tutte le automobili di quel modello presenti a magazzino e provvede visualizzare all’interno di una tabella html creata dinamicamente le seguenti informazioni: nomeModello, alimentazione, colore, anno, img. Le immagini hanno una altezza fissa di 65px.
-4. Al termine di ogni riga sono posizionati :
- un pulsante dettagli che consente di visualizzare una nuova sezione contenente tutti i dettagli dell’automobile selezionata, compresi alimentazione e cilindrata. Il campo prezzo è realizzato mediante un textbox editabile con a fianco un pulsante salva.
- un pulsante elimina che consente di eliminare dal database l’automobile corrente. In corrispondenza dell’ok, visualizzare un messaggio di conferma e ricaricare la sola tabella dei dettagli
-
-
-<img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine2.png">
-<img src="https://github.com/vallauri-ict/tpsi-playground-Giada-Valinotto/blob/master/AJAX/es%2004%20-%20Automobili/Immagine.png">
-
-_stud. Valinotto Giada_
+## La pagina risultati.php deve:
+- **Registrare** i risultati all’interno del database
+- **Inviare** al client una pagina di conferma che mostri al visitatore i risultati finora ottenuti dal sondaggio scelto, cioè: il numero totale dei votanti, la percentuale dei Si, dei No e dei Non so

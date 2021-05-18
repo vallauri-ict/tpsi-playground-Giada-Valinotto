@@ -1,5 +1,7 @@
 <?php 
-	function _connection($dbName)
+
+	define("DBNAME",'4b_dischi');
+	function _connection()
 	{
 		define('DBHOST', 'localhost');
 		define('DBUSER', 'root');
@@ -9,7 +11,7 @@
 		mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 		try
 		{
-			$con = new mysqli(DBHOST, DBUSER, DBPASS, $dbName);
+			$con = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 			$con -> set_charset("utf8"); // gestione degli apici
 			return $con;
 		}

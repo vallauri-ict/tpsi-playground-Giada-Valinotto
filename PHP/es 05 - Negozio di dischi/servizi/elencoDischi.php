@@ -27,7 +27,7 @@
     // non ce ne sono
 
     // step 2: apertura connessione
-    $con = _connection("4b_dischi");
+    $con = _connection();
 
     // step 3: esecuzione query
     // per prendere tutti i record omettere WHERE
@@ -36,15 +36,17 @@
     $rs = _execute($con, $sql);
 
     // step 4: invio dei dati al client
-	if($rs)
-		echo(json_encode($rs));
-	else{
-		// step 5: chiusura della connessione
-		$con -> close();
-		http_response_code(500);
-		die("Errore esecuzione query");
-	}
-	
-	// step 5: chiusura della connessione
-	$con -> close();
+    if($rs)
+    {
+        echo(json_encode($rs));
+    }
+    else
+    {
+        // step 5: chiusura della connessione
+        $con -> close();
+        http_response_code(500);
+        die("Errore esecuzione query");
+    }
+
+    $con->close();
 ?>

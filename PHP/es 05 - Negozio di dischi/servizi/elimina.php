@@ -9,12 +9,12 @@
     }
     else 
     {
-		http_response_code(400);
+        http_response_code(400);
         die("parametro mancande: id");
     }
 
     // step 2: apertura connessione
-    $con = _connection("4b_dischi");
+    $con = _connection();
 
     // step 3: esecuzione query
     $sql = "DELETE FROM `dischi` WHERE id = $id";
@@ -23,15 +23,14 @@
     // step 4: invio dei dati al client
     // la richiesta si aspetta un json quindi bisogna ritornargli
     // un json effettivamente
-	
-	if($rs)
-		echo('{"ris": "ok"}');
-	else {
-		// step 5: chiusura della connessione
-		$con -> close();
-		http_response_code(500);
-		die("Errore esecuzione query");
-	}
+    if($rs)
+        echo('{"ris": "ok"}'); 
+    else
+    {
+        $con -> close();
+        http_response_code(500);
+        die("Errore esecuzione della query");
+    }
 
     // step 5: chiusura della connessione
     $con -> close();
